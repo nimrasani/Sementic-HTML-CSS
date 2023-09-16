@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    margin: 2rem 0 10rem 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #f0c808;
+}
+
+/* ------------------- Method 1 -------------------- */
+
+#method1 a {
+    text-align: center;
+}
+
+#method1 img {
+    width: 25%;
+}
+
+#method1 nav {
+    text-align: center;
+    background-color: #00BFF3;
+    margin-top: 1rem;
+}
+
+#method1 li {
+    display: inline-block;
+}
+
+/* ------------------- Method 2 -------------------- */
+
+#method2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#method2 a {
+    flex-basis: 25%;
+}
+
+#method2 nav {
+    flex-basis: 60%;
+}
+
+#method2 ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#method2 li a {
+    background-color: #00BFF3;
+    border-radius: 2rem;
+}
+
+#method2 li a:hover {
+    background-color: #FF715B;
+    color: white;
+}
+
+/* ------------------- Method 3 -------------------- */
+
+#method3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#method3 a {
+    flex-basis: 25%;
+}
+
+#method3 nav {
+    flex-basis: 60%;
+}
+
+#method3 ul {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #00BFF3;
+    border-radius: 2rem;
+}

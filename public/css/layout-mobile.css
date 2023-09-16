@@ -1,0 +1,166 @@
+/* see the JS block for challenge explanation */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+
+    .hamburger img,
+    .close img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.logo {
+    width: 50%;
+}
+
+.hamburger img,
+.close img {
+    width: 36px;
+    height: 36px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 1000;
+    /* animate slide up/down */
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+nav:target {
+    transform: translateY(0);
+}
+
+ul {
+    list-style: none;
+    flex-basis: 80%;
+}
+
+li a {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffff;
+    padding: 1rem;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    color: #f0c808;
+}
+
+/* for debug purposes - the close icon is white, so I've added a background color so you can see it. Feel free to remove if you wish */
+.close img {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
+
+/* style for tablet: Logo centered on top, full navbar underneath */
+@media (min-width: 600px) {
+    header {
+        display: block;
+        text-align: center;
+        margin: 2rem 0 0 0;
+    }
+
+    header .logo {
+        text-align: center;
+        width: 35%;
+    }
+
+    header .hamburger,
+    .close {
+        display: none;
+    }
+
+    header nav {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: auto;
+        transform: none;
+        transition: none;
+        background-color: transparent;
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: #00bbf3;
+        border-radius: 0rem;
+        margin: 2rem 0 0 0;
+        padding: 0;
+    }
+}
+
+/* style for desktop: Logo and navbar next to each other */
+@media (min-width: 1000px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 2rem 0 0 2rem;
+    }
+
+    header .logo {
+        width: 25%;
+    }
+
+    header nav {
+        flex-basis: 60%;
+    }
+
+    header nav ul {
+        border-radius: 2rem;
+    }
+
+}
